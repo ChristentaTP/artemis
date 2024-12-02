@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -28,15 +29,20 @@
         @yield('content')
     </main>
 
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>© 2024 Artemis. All rights reserved.</p>
             <p>
-                <a href="/privacy">Kebijakan Privasi</a> |
+                <a href="/privacy">Kebijakan Privasi</a>
+                <span>|</span>
                 <a href="/terms">Syarat & Ketentuan</a>
             </p>
         </div>
     </footer>
+
 </body>
 </html>
