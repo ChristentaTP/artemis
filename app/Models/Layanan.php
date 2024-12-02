@@ -9,15 +9,29 @@ class Layanan extends Model
 {
     use HasFactory;
 
-    // Jika tabel database menggunakan nama lain, tambahkan properti ini:
-    protected $table = 'psikolog';
-
-    // Tentukan kolom yang dapat diisi (mass-assignable)
     protected $fillable = [
-        'name',
-        'specialization',
-        'rating',
-        'email',
-        'phone',
+        'nama_layanan', 'deskripsi', 'detail_pengerjaan', 'harga', 'durasi_pengerjaan', 'image', 'status',
     ];
+
+    // Relasi (Contoh: Fitur dan Testimoni)
+    public function fitur()
+    {
+        return $this->hasMany(Fitur::class);
+    }
+
+    public function testimoni()
+    {
+        return $this->hasMany(Testimoni::class);
+    }
+
+    public function isAvailable()
+    {
+        return $this->status === 'Tersedia';
+    }
+
+    public function getHarga()
+    {
+        return 'Rp ' . number_format($this->harga, 0, ',', '.');
+    }
 }
+

@@ -7,12 +7,14 @@ Route::get('/', function () {
 });
 
 Route::get('/layanan', function () {
-    return view('layanan');
+    return view('layanan.layanan');
 })->name('layanan');
+
 
 // routes/web.php
 Route::get('/pesan-proyek', 'App\Http\Controllers\ProyekController@showForm')->name('pesan-proyek');
 Route::post('/pesan-proyek', 'App\Http\Controllers\ProyekController@store')->name('proyek.store');
 
+Route::get('/layanan/{id}', [LayananController::class, 'show'])->name('layanan.show');
 
 
