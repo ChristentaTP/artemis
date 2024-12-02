@@ -10,7 +10,7 @@ class Psikolog extends Model
     use HasFactory;
 
     // Jika tabel database menggunakan nama lain, tambahkan properti ini:
-    // protected $table = 'nama_tabel';
+    protected $table = 'psikolog';
 
     // Tentukan kolom yang dapat diisi (mass-assignable)
     protected $fillable = [
