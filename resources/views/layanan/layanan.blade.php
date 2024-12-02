@@ -65,6 +65,20 @@
                     <span class="status busy">Penuh</span>
                     <a href="#" class="btn disabled">Pesan Sekarang</a>
                 </div>
+                <div class="services-grid">
+                    @foreach ($layanan as $service)
+                        <div class="service-card">
+                            <img src="{{ asset('images/' . $service->image) }}" alt="{{ $service->nama_layanan }}">
+                            <h3>{{ $service->nama_layanan }}</h3>
+                            <p>{{ $service->deskripsi }}</p>
+                            <span class="status {{ $service->isAvailable() ? 'available' : 'busy' }}">
+                                {{ $service->isAvailable() ? 'Tersedia' : 'Penuh' }}
+                            </span>
+                            <a href="{{ route('layanan.show', $service->id) }}" class="btn">
+                                Pesan Sekarang
+                            </a>
+                        </div>
+                        @endforeach
             </div>
         </div>
     </section>

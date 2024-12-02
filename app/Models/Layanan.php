@@ -1,9 +1,10 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Fitur;  // Import Fitur model
+use App\Models\Testimoni;  // Import Testimoni model
 
 class Layanan extends Model
 {
@@ -34,4 +35,3 @@ class Layanan extends Model
         return 'Rp ' . number_format($this->harga, 0, ',', '.');
     }
 }
-

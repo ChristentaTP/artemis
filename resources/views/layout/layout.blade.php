@@ -16,9 +16,16 @@
                 <a href="/" class="logo">Artemis</a>
                 <ul class="nav-menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/psikolog">Psikolog</a></li>
                     <li><a href="/about">Tentang Kami</a></li>
                     <li><a href="/contact">Kontak</a></li>
+
+                    <!-- Tambahkan link Profil jika sudah login -->
+                    @auth
+                        <li><a href="{{ route('profile') }}">Profil</a></li>
+                    @else
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
+                    @endauth
                 </ul>
             </nav>
         </div>
@@ -28,6 +35,7 @@
     <main class="content">
         @yield('content')
     </main>
+
 
 
 
