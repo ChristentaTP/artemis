@@ -1,28 +1,52 @@
 /* ===========================
-   TODO: CSS for Landing Page
+   Reset & Global Styles
 =========================== */
-
-/* Reset */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* Header */
-/* Header */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alert {
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Header
+=========================== */
 .header {
     background: #4CAF50;
     color: #fff;
     padding: 15px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 .navbar {
-    display: flex; /* Flexbox untuk tata letak horizontal */
-    justify-content: space-between; /* Jarak antara logo dan menu */
-    align-items: center; /* Vertikal tengah */
-    max-width: 1200px; /* Lebar maksimum header */
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 15px;
 }
 
@@ -34,14 +58,14 @@ body {
 }
 
 .nav-menu {
-    display: flex; /* Flexbox untuk membuat list horizontal */
-    list-style: none; /* Hilangkan bullet point */
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-menu li {
-    margin-left: 20px; /* Spasi antar item menu */
+    margin-left: 20px;
 }
 
 .nav-menu a {
@@ -55,13 +79,9 @@ body {
     color: #E0E0E0;
 }
 
-
-.header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* Footer */
+/* ===========================
+   Footer
+=========================== */
 .footer {
     background: #333;
     color: #fff;
@@ -74,42 +94,42 @@ body {
     font-size: 0.9em;
 }
 
-/* List styling in the footer */
 .footer p a {
     color: #4CAF50;
     text-decoration: none;
-    margin: 0 10px; /* Spasi antar tautan */
+    margin: 0 10px;
 }
 
 .footer p a:hover {
     text-decoration: underline;
 }
 
-
-.cta-buttons .btn {
+/* ===========================
+   Call-to-Action Buttons
+=========================== */
+.cta-buttons .btn,
+.psychologist-card .btn {
     display: inline-block;
     padding: 10px 20px;
-    margin: 5px;
-    color: #fff;
     background: #333;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin: 5px;
     transition: background 0.3s ease;
 }
 
-.cta-buttons .btn:hover {
+.cta-buttons .btn:hover,
+.psychologist-card .btn:hover {
     background: #555;
 }
 
-/* Articles Section */
+/* ===========================
+   Articles Section
+=========================== */
 .articles {
     padding: 30px 0;
     background: #f4f4f4;
-}
-
-.articles .container {
-    width: 90%;
-    margin: auto;
 }
 
 .articles h2 {
@@ -132,18 +152,11 @@ body {
 }
 
 /* ===========================
-   TODO: CSS for Psychologists Page
+   Psychologists Section
 =========================== */
-
-/* Psychologists Section */
 .psychologists {
     padding: 30px 0;
     background: #f4f4f4;
-}
-
-.psychologists .container {
-    width: 90%;
-    margin: auto;
 }
 
 .psychologists h2 {
@@ -153,7 +166,6 @@ body {
     color: #333;
 }
 
-/* Search Filter */
 .filter .search-bar {
     width: 100%;
     padding: 10px;
@@ -163,10 +175,9 @@ body {
     font-size: 1em;
 }
 
-/* Psychologist Cards */
 .psychologist-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -181,7 +192,7 @@ body {
 }
 
 .psychologist-card:hover {
-    transform: translateY(-5px); /* Hover effect for cards */
+    transform: translateY(-5px);
 }
 
 .psychologist-card img {
@@ -192,7 +203,6 @@ body {
     object-fit: cover;
 }
 
-/* Status Indicators */
 .psychologist-card .status {
     display: inline-block;
     padding: 5px 10px;
@@ -210,52 +220,9 @@ body {
     background: #E53935;
 }
 
-/* Buttons Styling */
-.psychologist-card .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
-
-.psychologist-card .btn:hover {
-    background: #555;
-}
-
 /* ===========================
-   TODO: CSS for Landing Page
+   Form Section
 =========================== */
-/* Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-/* Header */
-.header {
-    background: #4CAF50;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-.header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Form Section */
 .form-section {
     padding: 40px 20px;
     background-color: #fff;
@@ -265,21 +232,6 @@ body {
     margin: 40px auto;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.alert {
-    padding: 15px;
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/* Form Elements */
 .form-group {
     margin-bottom: 20px;
 }
@@ -306,7 +258,6 @@ body {
     resize: none;
 }
 
-/* Button Styling */
 .btn {
     display: inline-block;
     background: #4CAF50;

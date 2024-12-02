@@ -6,12 +6,13 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/psikolog', function () {
-    return view('psikolog');
-})->name('psikolog');
+Route::get('/layanan', function () {
+    return view('layanan');
+})->name('layanan');
 
 // routes/web.php
-Route::get('/pesan-konsultasi', 'App\Http\Controllers\KonsultasiController@showForm')->name('pesan-konsultasi');
-Route::post('/pesan-konsultasi', 'App\Http\Controllers\KonsultasiController@store')->name('konsultasi.store');
+Route::get('/pesan-proyek', 'App\Http\Controllers\ProyekController@showForm')->name('pesan-proyek');
+Route::post('/pesan-proyek', 'App\Http\Controllers\ProyekController@store')->name('proyek.store');
+
 
 
